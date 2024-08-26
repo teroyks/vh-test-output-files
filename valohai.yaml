@@ -1,0 +1,7 @@
+- step:
+    name: create-file
+    description: Create a single file with some dummy content
+    image: python:3.12
+    command:
+      - pip install -r requirements.txt
+      - python ./create-file.py
