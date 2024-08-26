@@ -6,6 +6,7 @@ approximately 549.8 MB.
 """
 
 from datetime import datetime as dt
+from pathlib import Path
 import valohai
 
 MEGABYTE = 1_000_000
@@ -21,6 +22,10 @@ def generate_large_file(filename: str, size_mb: int) -> None:
         remaining_bytes = size_in_bytes % chunk_size
         if remaining_bytes:
             f.write(b"\x00" * remaining_bytes)
+        print(f"File size: {f.tell()} bytes")
+    print(f"Wrote {size_in_bytes} bytes to {filename}")
+    file = Path(filename)
+    print(f"File size: {file.stat().st_size} bytes")
 
 
 def current_datetime():
