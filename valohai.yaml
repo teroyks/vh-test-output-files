@@ -5,3 +5,10 @@
     command:
       - pip install -r requirements.txt
       - python ./create-file.py
+- step:
+    name: create-large-file
+    description: Create a file using multipart upload
+    image: python:3.12
+    command:
+      - pip install -r requirements.txt
+      - python ./create-large-file.py
