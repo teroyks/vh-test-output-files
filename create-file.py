@@ -22,6 +22,12 @@ def current_datetime():
 
 
 if __name__ == "__main__":
+    # Create a file using valohai utils
     output_path = valohai.outputs(OUTPUT_DIR).path(f"dummy_{current_datetime()}.txt")
     print(f"Creating file: {output_path}")
     create_file(output_path)
+
+    # Create a file using the plain path
+    plain_output_path = f"/valohai/outputs/{OUTPUT_DIR}/plain_{current_datetime()}.txt"
+    print(f"Creating file: {plain_output_path}")
+    create_file(plain_output_path)
