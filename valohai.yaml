@@ -12,3 +12,10 @@
     command:
       - pip install -r requirements.txt
       - python ./create-large-file.py
+- step:
+    name: create-fixed-file
+    description: Create a file with fixed content
+    image: python:3.12
+    command:
+      - pip install -r requirements.txt
+      - python ./create-fixed-file.py
